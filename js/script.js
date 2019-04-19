@@ -99,7 +99,7 @@
             return filter;
         }
 
-        const graphqlUrl = 'http://osp-chess-api.azurewebsites.net/graphql';
+        const graphqlUrl = 'https://osp-chess-api.azurewebsites.net/graphql';
         let blockData = {};
         let projectInfo = {};
         let history = [
