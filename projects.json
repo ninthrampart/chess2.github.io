@@ -1,0 +1,30 @@
+{
+  "lead_id": "1234567890",
+  "prefiltered_project": "987654321",
+  "prefiltered_rooms": "3",
+  "prefiltered_furnish": false,
+  "project": [
+    {
+      "id": "1",
+      "address" : "Рязанский проспект, д. 100500",
+      "name": "ЖК Четверг",
+      "description": "Описание, ЖК комплекса. Какая-то инфа, какое-то описание.",
+      "space_min": "10",
+      "space_max": "100",
+      "cost_min": "1000000",
+      "cost_max": "10000000",
+      "image_url": "http://pb7.profitbase.ru/uploads/house_470_320/uploads/house/7/5b961e1781174.jpeg"
+    },
+    {
+      "id": "2",
+      "address" : "Рязанский проспект, д. 200500",
+      "name": "ЖК Среда",
+      "description": "Описание, ЖК комплекса. Какая-то инфа, какое-то описание.",
+      "space_min": "10",
+      "space_max": "100",
+      "cost_min": "1000000",
+      "cost_max": "10000000",
+      "image_url": "http://pb7.profitbase.ru/uploads/house_470_320/uploads/house/7/5b961e1781174.jpeg"
+    }
+  ]
+}

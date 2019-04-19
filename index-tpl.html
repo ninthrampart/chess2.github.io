@@ -1,0 +1,1342 @@
+<!doctype html>
+
+<html lang="RU">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Сайт</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+<button id="open-catalog">Открыть каталог</button>
+<div class="widget-catalog" id="widget-catalog">
+    <nav class="catalog-nav">
+        <div class="left-nav">
+            <a href="#" id="home-link">
+                <i class="svg-icon">
+                    <svg class="svg-icon" viewBox="0 0 20 20" width="100%" height="100%">
+                        <path d="M18.121,9.88l-7.832-7.836c-0.155-0.158-0.428-0.155-0.584,0L1.842,9.913c-0.262,0.263-0.073,0.705,0.292,0.705h2.069v7.042c0,0.227,0.187,0.414,0.414,0.414h3.725c0.228,0,0.414-0.188,0.414-0.414v-3.313h2.483v3.313c0,0.227,0.187,0.414,0.413,0.414h3.726c0.229,0,0.414-0.188,0.414-0.414v-7.042h2.068h0.004C18.331,10.617,18.389,10.146,18.121,9.88 M14.963,17.245h-2.896v-3.313c0-0.229-0.186-0.415-0.414-0.415H8.342c-0.228,0-0.414,0.187-0.414,0.415v3.313H5.032v-6.628h9.931V17.245z M3.133,9.79l6.864-6.868l6.867,6.868H3.133z"></path>
+                    </svg>
+                </i>
+            </a>
+            <a href="#" id="back-link">
+                <i class="svg-icon">
+                    <svg class="svg-icon" viewBox="0 0 20 20" width="100%" height="100%">
+                        <path d="M11.739,13.962c-0.087,0.086-0.199,0.131-0.312,0.131c-0.112,0-0.226-0.045-0.312-0.131l-3.738-3.736c-0.173-0.173-0.173-0.454,0-0.626l3.559-3.562c0.173-0.175,0.454-0.173,0.626,0c0.173,0.172,0.173,0.451,0,0.624l-3.248,3.25l3.425,3.426C11.911,13.511,11.911,13.789,11.739,13.962 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.148,3.374,7.521,7.521,7.521C14.147,17.521,17.521,14.148,17.521,10"></path>
+                    </svg>
+                </i>
+            </a>
+        </div>
+        <div class="right-nav">
+            <a href="#" id="close-link">
+                <i class="svg-icon">
+                    <svg class="svg-icon" viewBox="0 0 20 20" width="100%" height="100%">
+                        <path d="M10.185,1.417c-4.741,0-8.583,3.842-8.583,8.583c0,4.74,3.842,8.582,8.583,8.582S18.768,14.74,18.768,10C18.768,5.259,14.926,1.417,10.185,1.417 M10.185,17.68c-4.235,0-7.679-3.445-7.679-7.68c0-4.235,3.444-7.679,7.679-7.679S17.864,5.765,17.864,10C17.864,14.234,14.42,17.68,10.185,17.68 M10.824,10l2.842-2.844c0.178-0.176,0.178-0.46,0-0.637c-0.177-0.178-0.461-0.178-0.637,0l-2.844,2.841L7.341,6.52c-0.176-0.178-0.46-0.178-0.637,0c-0.178,0.176-0.178,0.461,0,0.637L9.546,10l-2.841,2.844c-0.178,0.176-0.178,0.461,0,0.637c0.178,0.178,0.459,0.178,0.637,0l2.844-2.841l2.844,2.841c0.178,0.178,0.459,0.178,0.637,0c0.178-0.176,0.178-0.461,0-0.637L10.824,10z"></path>
+                    </svg>
+                </i>
+            </a>
+        </div>
+    </nav>
+
+
+    <div class="widget-catalog-content">
+        <div class="widget-catalog-filter">
+            <form class="widget-catalog-filter-form">
+                <ul class="filters-wrap">
+                    <li class="filter-rooms">
+                        <div class="form-wrapper">
+                            <div class="form-checkboxes-wrapper">
+                                <label class="rooms_0 rcheckbox" title="Студия">
+                                    <input id="rooms_0" type="checkbox">
+                                    <span class="checkbox-text">
+                                            0к
+                                        </span>
+                                </label>
+                                <label class="rooms_1 rcheckbox" title="1 комната">
+                                    <input id="rooms_1" type="checkbox">
+                                    <span class="checkbox-text">
+                                            1к
+                                        </span>
+                                </label>
+                                <label class="rooms_2 rcheckbox" title="2 комнаты">
+                                    <input id="rooms_2" type="checkbox">
+                                    <span class="checkbox-text">
+                                            2к
+                                        </span>
+                                </label>
+                                <label class="rooms_3 rcheckbox" title="3 комнаты">
+                                    <input id="rooms_3" type="checkbox">
+                                    <span class="checkbox-text">
+                                            3к
+                                        </span>
+                                </label>
+                                <label class="rooms_4 rcheckbox" title="4 комнаты и более">
+                                    <input id="rooms_4" type="checkbox">
+                                    <span class="checkbox-text">
+                                            4к +
+                                        </span>
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="filter-price">
+                        <div class="form-wrapper">
+                            <div class="form-range-title">₽</div>
+                            <input id="price_from" class="range-input" placeholder="от">
+                            <input id="price_to" class="range-input last" placeholder="до">
+                        </div>
+                    </li>
+                    <li class="filter-area">
+                        <div class="form-wrapper">
+                            <div class="form-range-title">м<sup>2</sup></div>
+                            <input id="area_from" class="range-input" placeholder="от">
+                            <input id="area_to" class="range-input last" placeholder="до">
+                        </div>
+                    </li>
+                    <li class="filter-furnish">
+                        <div class="form-wrapper">
+                            <div class="form-checkboxes-wrapper">
+                                <label class="furnish_with rcheckbox active" title="С отделкой">
+                                    <input id="furnish_with" type="checkbox" checked>
+                                    <span class="checkbox-text">
+                                            С отделкой
+                                        </span>
+                                </label>
+                                <label class="furnish_without rcheckbox active" title="Без отделкой">
+                                    <input id="furnish_without" type="checkbox" checked>
+                                    <span class="checkbox-text">
+                                            Без отделкой
+                                        </span>
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="filter-sale">
+                        <div class="form-wrapper">
+                            <div class="form-checkboxes-wrapper">
+                                <label class="sale_only rcheckbox">
+                                    <input id="sale_only" type="checkbox">
+                                    <span class="checkbox-text">
+                                            Только Акции
+                                        </span>
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="filter-submit">
+                        <div class="form-wrapper">
+                            <button id="submit_filter">Поиск</button>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <div class="widget-catalog-objects">
+            <div class="project-page">
+                <div class="project-grid">
+                    <div class="project-item">
+                        <a class="project-card" href="#">
+                            <div class="project-card-title-container">
+                                <div class="project-card-title">
+                                    ЖК название
+                                </div>
+                                <div class="project-card-subtitle">
+                                    Адрес какой-то такой
+                                </div>
+                            </div>
+                            <div class="project-card-image-container">
+                                <img class="project-card-image"
+                                     src="http://pb7.profitbase.ru/uploads/house_470_320/uploads/house/7/5b961e1781174.jpeg">
+                            </div>
+                            <div class="project-card-description-container">
+                                <div class="project-card-description">
+                                    Описание, ЖК комплекса. Какая-то инфа, какое-то описание.
+                                </div>
+                                <div class="project-card-space">
+                                    <span class="project-card-range">Площадь:</span> от <span
+                                        class="project-card-space-min">30</span> до <span
+                                        class="project-card-space-max">500</span> м<sup>2</sup>
+                                </div>
+                                <div class="project-card-cost">
+                                    <span class="project-card-range">Стоимость:</span> от <span
+                                        class="project-card-cost-min">2&nbsp;360&nbsp;000</span> до <span
+                                        class="project-card-cost-max">50&nbsp;360&nbsp;000</span> ₽
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-item">
+                        <a class="project-card" href="#">
+                            <div class="project-card-title-container">
+                                <div class="project-card-title">
+                                    ЖК название
+                                </div>
+                                <div class="project-card-subtitle">
+                                    Адрес какой-то такой
+                                </div>
+                            </div>
+                            <div class="project-card-image-container">
+                                <img class="project-card-image"
+                                     src="http://pb7.profitbase.ru/uploads/house_470_320/uploads/house/7/5b961e1781174.jpeg">
+                            </div>
+                            <div class="project-card-description-container">
+                                <div class="project-card-description">
+                                    Описание, ЖК комплекса. Какая-то инфа, какое-то описание.
+                                </div>
+                                <div class="project-card-space">
+                                    <span class="project-card-range">Площадь:</span> от <span
+                                        class="project-card-space-min">30</span> до <span
+                                        class="project-card-space-max">500</span> м<sup>2</sup>
+                                </div>
+                                <div class="project-card-cost">
+                                    <span class="project-card-range">Стоимость:</span> от <span
+                                        class="project-card-cost-min">2&nbsp;360&nbsp;000</span> до <span
+                                        class="project-card-cost-max">50&nbsp;360&nbsp;000</span> ₽
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-item">
+                        <a class="project-card" href="#">
+                            <div class="project-card-title-container">
+                                <div class="project-card-title">
+                                    ЖК название
+                                </div>
+                                <div class="project-card-subtitle">
+                                    Адрес какой-то такой
+                                </div>
+                            </div>
+                            <div class="project-card-image-container">
+                                <img class="project-card-image"
+                                     src="http://pb7.profitbase.ru/uploads/house_470_320/uploads/house/7/5b961e1781174.jpeg">
+                            </div>
+                            <div class="project-card-description-container">
+                                <div class="project-card-description">
+                                    Описание, ЖК комплекса. Какая-то инфа, какое-то описание.
+                                </div>
+                                <div class="project-card-space">
+                                    <span class="project-card-range">Площадь:</span> от <span
+                                        class="project-card-space-min">30</span> до <span
+                                        class="project-card-space-max">500</span> м<sup>2</sup>
+                                </div>
+                                <div class="project-card-cost">
+                                    <span class="project-card-range">Стоимость:</span> от <span
+                                        class="project-card-cost-min">2&nbsp;360&nbsp;000</span> до <span
+                                        class="project-card-cost-max">50&nbsp;360&nbsp;000</span> ₽
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-item">
+                        <a class="project-card" href="#">
+                            <div class="project-card-title-container">
+                                <div class="project-card-title">
+                                    ЖК название
+                                </div>
+                                <div class="project-card-subtitle">
+                                    Адрес какой-то такой
+                                </div>
+                            </div>
+                            <div class="project-card-image-container">
+                                <img class="project-card-image"
+                                     src="http://pb7.profitbase.ru/uploads/house_470_320/uploads/house/7/5b961e1781174.jpeg">
+                            </div>
+                            <div class="project-card-description-container">
+                                <div class="project-card-description">
+                                    Описание, ЖК комплекса. Какая-то инфа, какое-то описание.
+                                </div>
+                                <div class="project-card-space">
+                                    <span class="project-card-range">Площадь:</span> от <span
+                                        class="project-card-space-min">30</span> до <span
+                                        class="project-card-space-max">500</span> м<sup>2</sup>
+                                </div>
+                                <div class="project-card-cost">
+                                    <span class="project-card-range">Стоимость:</span> от <span
+                                        class="project-card-cost-min">2&nbsp;360&nbsp;000</span> до <span
+                                        class="project-card-cost-max">50&nbsp;360&nbsp;000</span> ₽
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-item">
+                        <a class="project-card" href="#">
+                            <div class="project-card-title-container">
+                                <div class="project-card-title">
+                                    ЖК название
+                                </div>
+                                <div class="project-card-subtitle">
+                                    Адрес какой-то такой
+                                </div>
+                            </div>
+                            <div class="project-card-image-container">
+                                <img class="project-card-image"
+                                     src="http://pb7.profitbase.ru/uploads/house_470_320/uploads/house/7/5b961e1781174.jpeg">
+                            </div>
+                            <div class="project-card-description-container">
+                                <div class="project-card-description">
+                                    Описание, ЖК комплекса. Какая-то инфа, какое-то описание.
+                                </div>
+                                <div class="project-card-space">
+                                    <span class="project-card-range">Площадь:</span> от <span
+                                        class="project-card-space-min">30</span> до <span
+                                        class="project-card-space-max">500</span> м<sup>2</sup>
+                                </div>
+                                <div class="project-card-cost">
+                                    <span class="project-card-range">Стоимость:</span> от <span
+                                        class="project-card-cost-min">2&nbsp;360&nbsp;000</span> до <span
+                                        class="project-card-cost-max">50&nbsp;360&nbsp;000</span> ₽
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div style="display: none" class="house-page">
+                <div class="house-grid">
+                    <div class="house-item">
+                        <a class="house-card" href="#">
+                            <div class="house-card-title-container">
+                                <div class="house-card-title">
+                                    Корпус Т1
+                                </div>
+                                <div class="house-card-date">
+                                    <div class="house-card-date-mark">
+                                        23.05.2019
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="house-card-image-container">
+                                <img class="house-card-image"
+                                     src="http://pb7.profitbase.ru/uploads/house_470_320/uploads/house/7/5b961e1781174.jpeg">
+                            </div>
+                            <div class="house-card-description-container">
+                                <div class="house-card-description">
+                                    <div class="house-card-floors">25 этажей</div>
+                                    <div class="house-card-type">монолит</div>
+                                </div>
+                                <div class="house-card-space">
+                                    <span class="house-card-range">Площадь:</span> от <span
+                                        class="house-card-space-min">30</span> до <span
+                                        class="house-card-space-max">500</span> м<sup>2</sup>
+                                </div>
+                                <div class="house-card-cost">
+                                    <span class="house-card-range">Стоимость:</span> от <span
+                                        class="house-card-cost-min">2&nbsp;360&nbsp;000</span> до <span
+                                        class="house-card-cost-max">50&nbsp;360&nbsp;000</span> ₽
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="house-item">
+                        <a class="house-card" href="#">
+                            <div class="house-card-title-container">
+                                <div class="house-card-title">
+                                    Корпус Т2
+                                </div>
+                                <div class="house-card-date">
+                                    <div class="house-card-date-mark">
+                                        23.05.2019
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="house-card-image-container">
+                                <img class="house-card-image"
+                                     src="http://pb7.profitbase.ru/uploads/house_470_320/uploads/house/7/5b961e1781174.jpeg">
+                            </div>
+                            <div class="house-card-description-container">
+                                <div class="house-card-description">
+                                    <div class="house-card-floors">25 этажей</div>
+                                    <div class="house-card-type">монолит</div>
+                                </div>
+                                <div class="house-card-space">
+                                    <span class="house-card-range">Площадь:</span> от <span
+                                        class="house-card-space-min">30</span> до <span
+                                        class="house-card-space-max">500</span> м<sup>2</sup>
+                                </div>
+                                <div class="house-card-cost">
+                                    <span class="house-card-range">Стоимость:</span> от <span
+                                        class="house-card-cost-min">2&nbsp;360&nbsp;000</span> до <span
+                                        class="house-card-cost-max">50&nbsp;360&nbsp;000</span> ₽
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="house-item">
+                        <a class="house-card" href="#">
+                            <div class="house-card-title-container">
+                                <div class="house-card-title">
+                                    Корпус Т3
+                                </div>
+                                <div class="house-card-date">
+                                    <div class="house-card-date-mark">
+                                        23.05.2019
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="house-card-image-container">
+                                <img class="house-card-image"
+                                     src="http://pb7.profitbase.ru/uploads/house_470_320/uploads/house/7/5b961e1781174.jpeg">
+                            </div>
+                            <div class="house-card-description-container">
+                                <div class="house-card-description">
+                                    <div class="house-card-floors">25 этажей</div>
+                                    <div class="house-card-type">монолит</div>
+                                </div>
+                                <div class="house-card-space">
+                                    <span class="house-card-range">Площадь:</span> от <span
+                                        class="house-card-space-min">30</span> до <span
+                                        class="house-card-space-max">500</span> м<sup>2</sup>
+                                </div>
+                                <div class="house-card-cost">
+                                    <span class="house-card-range">Стоимость:</span> от <span
+                                        class="house-card-cost-min">2&nbsp;360&nbsp;000</span> до <span
+                                        class="house-card-cost-max">50&nbsp;360&nbsp;000</span> ₽
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="house-item">
+                        <a class="house-card" href="#">
+                            <div class="house-card-title-container">
+                                <div class="house-card-title">
+                                    Корпус Т4
+                                </div>
+                                <div class="house-card-date">
+                                    <div class="house-card-date-mark">
+                                        23.05.2019
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="house-card-image-container">
+                                <img class="house-card-image"
+                                     src="http://pb7.profitbase.ru/uploads/house_470_320/uploads/house/7/5b961e1781174.jpeg">
+                            </div>
+                            <div class="house-card-description-container">
+                                <div class="house-card-description">
+                                    <div class="house-card-floors">25 этажей</div>
+                                    <div class="house-card-type">монолит</div>
+                                </div>
+                                <div class="house-card-space">
+                                    <span class="house-card-range">Площадь:</span> от <span
+                                        class="house-card-space-min">30</span> до <span
+                                        class="house-card-space-max">500</span> м<sup>2</sup>
+                                </div>
+                                <div class="house-card-cost">
+                                    <span class="house-card-range">Стоимость:</span> от <span
+                                        class="house-card-cost-min">2&nbsp;360&nbsp;000</span> до <span
+                                        class="house-card-cost-max">50&nbsp;360&nbsp;000</span> ₽
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="house-item">
+                        <a class="house-card" href="#">
+                            <div class="house-card-title-container">
+                                <div class="house-card-title">
+                                    Корпус Т5
+                                </div>
+                                <div class="house-card-date">
+                                    <div class="house-card-date-mark">
+                                        23.05.2019
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="house-card-image-container">
+                                <img class="house-card-image"
+                                     src="http://pb7.profitbase.ru/uploads/house_470_320/uploads/house/7/5b961e1781174.jpeg">
+                            </div>
+                            <div class="house-card-description-container">
+                                <div class="house-card-description">
+                                    <div class="house-card-floors">25 этажей</div>
+                                    <div class="house-card-type">монолит</div>
+                                </div>
+                                <div class="house-card-space">
+                                    <span class="house-card-range">Площадь:</span> от <span
+                                        class="house-card-space-min">30</span> до <span
+                                        class="house-card-space-max">500</span> м<sup>2</sup>
+                                </div>
+                                <div class="house-card-cost">
+                                    <span class="house-card-range">Стоимость:</span> от <span
+                                        class="house-card-cost-min">2&nbsp;360&nbsp;000</span> до <span
+                                        class="house-card-cost-max">50&nbsp;360&nbsp;000</span> ₽
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div style="display: none" class="block-page">
+                <div class="block-grid">
+                    <div class="block-item">
+                        <a class="block-card" href="#">
+                            <div class="block-card-title-container">
+                                <div class="block-card-title">
+                                    Квартиры
+                                </div>
+                            </div>
+                            <div class="block-card-image-container">
+                                <img class="block-card-image"
+                                     src="http://pb7.profitbase.ru/uploads/house_470_320/uploads/house/7/5b961e1781174.jpeg">
+                            </div>
+                            <div class="block-card-description-container">
+                                <div class="block-card-space">
+                                    <span class="block-card-range">Площадь:</span> от <span
+                                        class="block-card-space-min">30</span> до <span
+                                        class="block-card-space-max">500</span> м<sup>2</sup>
+                                </div>
+                                <div class="block-card-cost">
+                                    <span class="block-card-range">Стоимость:</span> от <span
+                                        class="block-card-cost-min">2&nbsp;360&nbsp;000</span> до <span
+                                        class="block-card-cost-max">50&nbsp;360&nbsp;000</span> ₽
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="block-item">
+                        <a class="block-card" href="#">
+                            <div class="block-card-title-container">
+                                <div class="block-card-title">
+                                    Кладовки
+                                </div>
+                            </div>
+                            <div class="block-card-image-container">
+                                <img class="block-card-image"
+                                     src="http://pb7.profitbase.ru/uploads/house_470_320/uploads/house/7/5b961e1781174.jpeg">
+                            </div>
+                            <div class="block-card-description-container">
+                                <div class="block-card-space">
+                                    <span class="block-card-range">Площадь:</span> от <span
+                                        class="block-card-space-min">30</span> до <span
+                                        class="block-card-space-max">500</span> м<sup>2</sup>
+                                </div>
+                                <div class="block-card-cost">
+                                    <span class="block-card-range">Стоимость:</span> от <span
+                                        class="block-card-cost-min">2&nbsp;360&nbsp;000</span> до <span
+                                        class="block-card-cost-max">50&nbsp;360&nbsp;000</span> ₽
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div style="display: none" class="property-page">
+                <div class="property-legend">
+                    <div class="property-legend-items">
+                        <div class="property-legend-item">
+                            <span class="property-legend-color legend-color-free"></span>
+                            Свободные
+                        </div>
+                        <div class="property-legend-item">
+                            <span class="property-legend-color legend-color-reserved"></span>
+                            Забранированные
+                        </div>
+                        <div class="property-legend-item">
+                            <span class="property-legend-color legend-color-sold"></span>
+                            Проданные
+                        </div>
+                        <div class="property-legend-item">
+                            <span class="property-legend-color legend-color-disabled"></span>
+                            Недоступные
+                        </div>
+                    </div>
+                </div>
+                <div class="property-grid-wrapper">
+                    <div class="property-grid">
+                        <div class="property-grid-box">
+                            <div class="property-floors-line-left">
+                                <div class="floor-line line-1">
+                                    <span class="floor-number">3</span>
+                                </div>
+                                <div class="floor-line line-2">
+                                    <span class="floor-number">2</span>
+                                </div>
+                                <div class="floor-line line-3">
+                                    <span class="floor-number">1</span>
+                                </div>
+                            </div>
+                            <div class="property-floors-line-right">
+                                <div class="floor-line">
+                                    <span class="floor-number">3</span>
+                                </div>
+                                <div class="floor-line">
+                                    <span class="floor-number">2</span>
+                                </div>
+                                <div class="floor-line">
+                                    <span class="floor-number">1</span>
+                                </div>
+                            </div>
+                            <div class="property-floors-lines">
+                                <div class="property-floors-line"></div>
+                                <div class="property-floors-line"></div>
+                                <div class="property-floors-line"></div>
+                            </div>
+                            <div id="property-grid-content" class="property-box">
+                                <div class="property-box-scroll">
+                                    <div class="property-box-inner">
+                                        <div class="property-floor line-1">
+                                            <div class="property-floor-section">
+                                                <div class="property-section-title-wrap">
+                                                    <div class="property-section-title">Секция 1</div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-free discount">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">23 310 000 ₽
+                                                                </div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                    <span class="info-area-price"> - 52 691 ₽/м<sup>2</sup>
+                                                                        </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-reserved">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">Цена Скрыта</div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-sold">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">Цена Скрыта</div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-disabled">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            Помещение недоступно
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="property-floor-section">
+                                                <div class="property-section-title-wrap">
+                                                    <div class="property-section-title">Секция 2</div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-free property-cell-hide discount">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">3 310 000 ₽
+                                                                </div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                    <span class="info-area-price"> - 52 691 ₽/м<sup>2</sup>
+                                                                        </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-reserved">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">Цена Скрыта</div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-sold">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">Цена Скрыта</div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-disabled">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            Помещение недоступно
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="property-floor-section">
+                                                <div class="property-section-title-wrap">
+                                                    <div class="property-section-title">Секция 3</div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-free discount">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">3 310 000 ₽
+                                                                </div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                    <span class="info-area-price"> - 52 691 ₽/м<sup>2</sup>
+                                                                        </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-reserved">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">Цена Скрыта</div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-sold">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">Цена Скрыта</div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-disabled">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            Помещение недоступно
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="property-floor line-2">
+                                            <div class="property-floor-section">
+                                                <div class="property-cell-wrapper status-color-free discount">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">3 310 000 ₽
+                                                                </div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                    <span class="info-area-price"> - 52 691 ₽/м<sup>2</sup>
+                                                                        </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-reserved">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">Цена Скрыта</div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-sold">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">Цена Скрыта</div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-disabled">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            Помещение недоступно
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="property-floor-section">
+                                                <div class="property-cell-wrapper status-color-free property-cell-hide">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">3 310 000 ₽
+                                                                </div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                    <span class="info-area-price"> - 52 691 ₽/м<sup>2</sup>
+                                                                        </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-reserved">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">Цена Скрыта</div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-sold">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">Цена Скрыта</div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-disabled">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            Помещение недоступно
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="property-floor-section">
+                                                <div class="property-cell-wrapper status-color-free discount">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">3 310 000 ₽
+                                                                </div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                    <span class="info-area-price"> - 52 691 ₽/м<sup>2</sup>
+                                                                        </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-reserved">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">Цена Скрыта</div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-sold">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">Цена Скрыта</div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-disabled">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            Помещение недоступно
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="property-floor line-3">
+                                            <div class="property-floor-section">
+                                                <div class="property-cell-wrapper status-color-free discount">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">3 310 000 ₽
+                                                                </div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                    <span class="info-area-price"> - 52 691 ₽/м<sup>2</sup>
+                                                                        </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-reserved">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">Цена Скрыта</div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-sold">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">Цена Скрыта</div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-disabled">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            Помещение недоступно
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="property-floor-section">
+                                                <div class="property-cell-wrapper status-color-free discount">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">3 310 000 ₽
+                                                                </div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                    <span class="info-area-price"> - 52 691 ₽/м<sup>2</sup>
+                                                                        </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-reserved">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">Цена Скрыта</div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-sold">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">Цена Скрыта</div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-disabled">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            Помещение недоступно
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="property-floor-section">
+                                                <div class="property-cell-wrapper status-color-free discount">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">3 310 000 ₽
+                                                                </div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                    <span class="info-area-price"> - 52 691 ₽/м<sup>2</sup>
+                                                                        </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-reserved">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">Цена Скрыта</div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-sold">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms">1</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            <div class="property-tooltip-left">
+                                                                <div class="property-tooltip-rooms">2</div>
+                                                                <div class="property-tooltip-number">№ 211</div>
+                                                            </div>
+                                                            <div class="property-tooltip-right">
+                                                                <div class="property-tooltip-price">Цена Скрыта</div>
+                                                                <div class="property-tooltip-info">
+                                                                    <span class="info-area">64.61 м<sup>2</sup></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="property-cell-wrapper status-color-disabled">
+                                                    <div class="property-cell">
+                                                        <div class="property-cell-element">
+                                                            <span class="property-rooms"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-tooltip">
+                                                        <div class="property-tooltip-inner">
+                                                            Помещение недоступно
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</footer>
+</body>
+
+</html>

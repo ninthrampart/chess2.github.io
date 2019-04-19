@@ -1,0 +1,188 @@
+{
+  "lead_id": "1234567890",
+  "prefiltered_project": "987654321",
+  "prefiltered_rooms": "3",
+  "prefiltered_furnish": false,
+  "housing": [
+    {
+      "id": "1",
+      "name": "Корпус Т1",
+      "space_min": "10",
+      "space_max": "100",
+      "cost_min": "1000000",
+      "cost_max": "10000000",
+      "image_url": "http://pb7.profitbase.ru/uploads/house_470_320/uploads/house/7/5b961dbd42dc6.jpeg",
+      "type": "Монолит",
+      "count_floor": "25",
+      "plan_date": "23.06.2019",
+      "blocks": [
+        {
+          "id": "1",
+          "block_type": "квартины"
+        },
+        {
+          "id": "2",
+          "block_type": "машиноместа"
+        },
+        {
+          "id": "3",
+          "block_type": "кладовки"
+        },
+        {
+          "id": "4",
+          "block_type": "коммерция"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Корпус Т2",
+      "space_min": "10",
+      "space_max": "100",
+      "cost_min": "1000000",
+      "cost_max": "10000000",
+      "image_url": "http://pb7.profitbase.ru/uploads/house_470_320/uploads/house/7/5b961dbd42dc6.jpeg",
+      "type": "Монолит",
+      "count_floor": "25",
+      "plan_date": "23.06.2019",
+      "blocks": [
+        {
+          "id": "1",
+          "block_type": "квартины"
+        },
+        {
+          "id": "2",
+          "block_type": "машиноместа"
+        },
+        {
+          "id": "3",
+          "block_type": "кладовки"
+        },
+        {
+          "id": "4",
+          "block_type": "коммерция"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Корпус Т3",
+      "space_min": "10",
+      "space_max": "100",
+      "cost_min": "1000000",
+      "cost_max": "10000000",
+      "image_url": "http://pb7.profitbase.ru/uploads/house_470_320/uploads/house/7/5b961dbd42dc6.jpeg",
+      "type": "Монолит",
+      "count_floor": "25",
+      "plan_date": "23.06.2019",
+      "blocks": [
+        {
+          "id": "1",
+          "block_type": "квартины"
+        },
+        {
+          "id": "2",
+          "block_type": "машиноместа"
+        },
+        {
+          "id": "3",
+          "block_type": "кладовки"
+        },
+        {
+          "id": "4",
+          "block_type": "коммерция"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Корпус Т4",
+      "space_min": "10",
+      "space_max": "100",
+      "cost_min": "1000000",
+      "cost_max": "10000000",
+      "image_url": "http://pb7.profitbase.ru/uploads/house_470_320/uploads/house/7/5b961dbd42dc6.jpeg",
+      "type": "Монолит",
+      "count_floor": "25",
+      "plan_date": "23.06.2019",
+      "blocks": [
+        {
+          "id": "1",
+          "block_type": "квартины"
+        },
+        {
+          "id": "2",
+          "block_type": "машиноместа"
+        },
+        {
+          "id": "3",
+          "block_type": "кладовки"
+        },
+        {
+          "id": "4",
+          "block_type": "коммерция"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Корпус Т5",
+      "space_min": "10",
+      "space_max": "100",
+      "cost_min": "1000000",
+      "cost_max": "10000000",
+      "image_url": "http://pb7.profitbase.ru/uploads/house_470_320/uploads/house/7/5b961dbd42dc6.jpeg",
+      "type": "Монолит",
+      "count_floor": "25",
+      "plan_date": "23.06.2019",
+      "blocks": [
+        {
+          "id": "1",
+          "block_type": "квартины"
+        },
+        {
+          "id": "2",
+          "block_type": "машиноместа"
+        },
+        {
+          "id": "3",
+          "block_type": "кладовки"
+        },
+        {
+          "id": "4",
+          "block_type": "коммерция"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Корпус Т6",
+      "space_min": "10",
+      "space_max": "100",
+      "cost_min": "1000000",
+      "cost_max": "10000000",
+      "image_url": "http://pb7.profitbase.ru/uploads/house_470_320/uploads/house/7/5b961dbd42dc6.jpeg",
+      "type": "Монолит",
+      "count_floor": "25",
+      "plan_date": "Дом сдан",
+      "blocks": [
+        {
+          "id": "1",
+          "block_type": "квартины"
+        },
+        {
+          "id": "2",
+          "block_type": "машиноместа"
+        },
+        {
+          "id": "3",
+          "block_type": "кладовки"
+        },
+        {
+          "id": "4",
+          "block_type": "коммерция"
+        }
+      ]
+    }
+  ]
+}
