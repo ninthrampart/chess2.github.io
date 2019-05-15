@@ -99,6 +99,7 @@
           display: none;
         }
       }
+
       .breadcrumb-house {
         display: inline-block;
         padding: 0 30px;
@@ -225,6 +226,29 @@
       }
     }
 
+    #finishing-select {
+      cursor: pointer;
+      background: white;
+      border: 1px solid #ededed;
+      padding: 7px 12px;
+      line-height: 22px;
+      color: #808080;
+      font-size: 16px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      -webkit-border-top-right-radius: 5px;
+      -webkit-border-bottom-right-radius: 5px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      -webkit-border-top-left-radius: 5px;
+      -webkit-border-bottom-left-radius: 5px;
+
+      &:focus {
+        outline: transparent;
+        border-color: rgba(44, 125, 206, 0.5);
+      }
+    }
+
     .filter-price,
     .filter-area {
       .form-wrapper {
@@ -333,6 +357,11 @@
       border-radius: 5px;
       outline: 0;
       border: none;
+
+      &:disabled {
+        background: #808080;
+        cursor: default;
+      }
     }
   }
 
@@ -540,7 +569,7 @@
       }
 
       .property-grid-wrapper {
-        margin-left:10px;
+        margin-left: 10px;
         clear: left;
         position: relative;
         z-index: 10;
@@ -601,8 +630,6 @@
               .property-floors-line {
                 height: 32px;
                 margin-bottom: 1px;
-
-
 
 
                 &.property-floors-line_hovered {
@@ -770,7 +797,7 @@
                           content: "";
                           display: block;
                           position: absolute;
-                          background: #63cba5;
+                          background: #ff5a5a;
                           width: 12px;
                           height: 12px;
                           -webkit-border-radius: 6px;
@@ -889,7 +916,7 @@
                           border-top-left-radius: 0;
                           border-bottom-right-radius: 0;
                           background: #63cba5;
-                          top: 0;
+                          top: -1px;
                           right: -1px;
                           line-height: 30px;
                           color: white;
@@ -1019,8 +1046,9 @@
         }
       }
 
-      .property-price-wrapper {
-        border: 2px solid #4691f6;
+      .property-price-wrapper, .property-discount-wrapper {
+        border: 1px solid #ededed;
+        border-left: 2px solid #4691f6;
         margin-bottom: 20px;
         padding: 10px;
         width: 100%;
@@ -1034,13 +1062,23 @@
           color: #808080;
           text-align: right;
         }
+      }
 
-        .property-discount-name,
-        .property-discount-percent {
-          background: #05ab6e;
-          color: white;
+      .property-discount-wrapper {
+        border-left-color: #ff5a5a;
+
+        .property-discount-name {
+          color: #ff5a5a;
+
+          .discount-value {
+            font-weight: bold;
+          }
         }
 
+        .property-discount-percent {
+          color: #808080;
+          text-align: right;
+        }
       }
 
       .property-info {
@@ -1063,6 +1101,7 @@
         td {
           padding-bottom: 10px;
           vertical-align: top;
+          width: 50%;
         }
 
 

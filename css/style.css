@@ -190,6 +190,27 @@
   /* Non-prefixed version, currently
                         supported by Chrome and Opera */
 }
+.widget-catalog .filters-wrap #finishing-select {
+  cursor: pointer;
+  background: white;
+  border: 1px solid #ededed;
+  padding: 7px 12px;
+  line-height: 22px;
+  color: #808080;
+  font-size: 16px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+}
+.widget-catalog .filters-wrap #finishing-select:focus {
+  outline: transparent;
+  border-color: rgba(44, 125, 206, 0.5);
+}
 .widget-catalog .filters-wrap .filter-price .form-wrapper,
 .widget-catalog .filters-wrap .filter-area .form-wrapper {
   position: relative;
@@ -285,6 +306,10 @@
   border-radius: 5px;
   outline: 0;
   border: none;
+}
+.widget-catalog .filters-wrap #submit_filter:disabled {
+  background: #808080;
+  cursor: default;
 }
 .widget-catalog .widget-catalog-objects {
   padding: 23px 30px 0;
@@ -881,7 +906,7 @@
   content: "";
   display: block;
   position: absolute;
-  background: #63cba5;
+  background: #ff5a5a;
   width: 12px;
   height: 12px;
   -webkit-border-radius: 6px;
@@ -972,7 +997,7 @@
   border-top-left-radius: 0;
   border-bottom-right-radius: 0;
   background: #63cba5;
-  top: 0;
+  top: -1px;
   right: -1px;
   line-height: 30px;
   color: white;
@@ -1070,24 +1095,36 @@
   margin-bottom: 20px;
   display: inline-block;
 }
-.widget-catalog .aside-container .property-card-wrapper .property-price-wrapper {
-  border: 2px solid #4691f6;
+.widget-catalog .aside-container .property-card-wrapper .property-price-wrapper,
+.widget-catalog .aside-container .property-card-wrapper .property-discount-wrapper {
+  border: 1px solid #ededed;
+  border-left: 2px solid #4691f6;
   margin-bottom: 20px;
   padding: 10px;
   width: 100%;
   font-size: 20px;
 }
-.widget-catalog .aside-container .property-card-wrapper .property-price-wrapper .property-price {
+.widget-catalog .aside-container .property-card-wrapper .property-price-wrapper .property-price,
+.widget-catalog .aside-container .property-card-wrapper .property-discount-wrapper .property-price {
   font-weight: bold;
 }
-.widget-catalog .aside-container .property-card-wrapper .property-price-wrapper .property-cost {
+.widget-catalog .aside-container .property-card-wrapper .property-price-wrapper .property-cost,
+.widget-catalog .aside-container .property-card-wrapper .property-discount-wrapper .property-cost {
   color: #808080;
   text-align: right;
 }
-.widget-catalog .aside-container .property-card-wrapper .property-price-wrapper .property-discount-name,
-.widget-catalog .aside-container .property-card-wrapper .property-price-wrapper .property-discount-percent {
-  background: #05ab6e;
-  color: white;
+.widget-catalog .aside-container .property-card-wrapper .property-discount-wrapper {
+  border-left-color: #ff5a5a;
+}
+.widget-catalog .aside-container .property-card-wrapper .property-discount-wrapper .property-discount-name {
+  color: #ff5a5a;
+}
+.widget-catalog .aside-container .property-card-wrapper .property-discount-wrapper .property-discount-name .discount-value {
+  font-weight: bold;
+}
+.widget-catalog .aside-container .property-card-wrapper .property-discount-wrapper .property-discount-percent {
+  color: #808080;
+  text-align: right;
 }
 .widget-catalog .aside-container .property-card-wrapper .property-info {
   border: 1px solid #ededed;
@@ -1106,5 +1143,6 @@
 .widget-catalog .aside-container .property-card-wrapper .property-info td {
   padding-bottom: 10px;
   vertical-align: top;
+  width: 50%;
 }
 /*# sourceMappingURL=style.css.map */

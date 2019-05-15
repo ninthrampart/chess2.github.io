@@ -127,6 +127,9 @@
                             }
                         }`;
             const options = get_filter();
+
+
+            show_throbber();
             $.ajax({
                 url: graphqlUrl,
                 method: 'POST',
@@ -183,11 +186,15 @@
 
                         });
                     } else {
+                        empty_response_message();
                         console.log('Нет объектов');
                     }
                 })
-                .fail(function (e) {
-                    console.log('Ошибка');
+                .fail(function (error) {
+                    console.log(error);
+                })
+                .always(function() {
+                    hide_throbber();
                 });
         };
 
@@ -219,6 +226,8 @@
                               }
                             }`;
             const options = get_filter();
+
+            show_throbber();
             $.ajax({
                 url: graphqlUrl,
                 method: 'POST',
@@ -308,11 +317,15 @@
 
                         });
                     } else {
+                        empty_response_message();
                         console.log('Нет объектов');
                     }
                 })
-                .fail(function () {
-                    console.log('Ошибка');
+                .fail(function (error) {
+                    console.log(error);
+                })
+                .always(function() {
+                    hide_throbber();
                 });
         };
 
@@ -351,6 +364,7 @@
                               }
                             }`;
             const options = get_filter();
+            show_throbber();
             $.ajax({
                 url: graphqlUrl,
                 method: 'POST',
@@ -391,6 +405,7 @@
                         $.each(data.estates, function (i, estate) {
                             estate.sectionNumber = estate.sectionNumber != null ? estate.sectionNumber : 1;
                             blockData[estate.id] = estate;
+                            blockData[estate.id].propertyType = data.propertyType;
                             sections[estate.floor] = sections[estate.floor] || [];
                             sections[estate.floor][estate.sectionNumber] = sections[estate.floor][estate.sectionNumber] || [];
 
@@ -482,7 +497,7 @@
                                                     class: 'property-cell-element',
                                                     append: $('<div>', {
                                                         class: 'property-rooms',
-                                                        text: rooms
+                                                        text: rooms ? rooms : data.propertyType === 'Машиноместо' ? 'М' : data.propertyType === 'Кладовая' || data.propertyType === 'Коммерция' ? 'К' : ''
                                                     })
                                                 })
                                             })
@@ -511,11 +526,15 @@
 
 
                     } else {
+                        empty_response_message();
                         console.log('Нет объектов');
                     }
                 })
-                .fail(function () {
-                    console.log('Ошибка');
+                .fail(function (error) {
+                    console.log(error);
+                })
+                .always(function() {
+                    hide_throbber();
                 });
         };
 
@@ -673,10 +692,10 @@
                         class: 'property-tooltip-left',
                         append: $('<div>', {
                             class: 'property-tooltip-rooms',
-                            text: estate.rooms
+                            text: estate.rooms ? estate.rooms : estate.propertyType === 'Машиноместо' ? 'М' : estate.propertyType === 'Кладовая' || estate.propertyType === 'Коммерция' ? 'К' : ''
                         }).add($('<div>', {
                             class: 'property-tooltip-number',
-                            text: '№ ' + estate.number
+                            text: estate.number ? '№ ' + estate.number : ''
                         }))
                     }).add($('<div>', {
                         class: 'property-tooltip-right',
@@ -712,39 +731,14 @@
             let $requestButton = '';
             let $priceBlock = '';
             if (estate.cost && estate.price) {
-                let $discountBlock = '';
-                if (estate.discounts.length) {
-                    for (let discount of estate.discounts) {
-                        let $discountLine = $('<tr>', {
-                            append: $('<td>', {
-                                class: 'property-discount-name',
-                                append: discount.name
-                            }).add($('<td>', {
-                                class: 'property-discount-percent',
-                                append: discount.percent + ' %'
-                            }))
-                        }).add($('<tr>', {
-                            append: $('<td>', {
-                                class: 'property-price',
-                                append: discount.discountPrice + ' ₽'
-                            }).add($('<td>', {
-                                class: 'property-cost',
-                                append: discount.discountCost + ' ₽/м<sup>2</sup>'
-                            }))
-                        }));
-                        if ($discountBlock) {
-                            $discountBlock.add($discountLine);
-                        } else {
-                            $discountBlock = $discountLine;
-                        }
-                    }
-                }
                 $requestButton = $('<div>', {
                     class: 'property-request-wrapper',
                     append: $('<a>', {
+                        id: 'request-create-button',
                         class: 'property-request-button',
                         href: '#',
-                        text: 'Заявка на квартиру'
+                        text: 'Заявка на квартиру',
+                        'data-property-id': property_id,
                     })
                 });
                 $priceBlock = $('<table>', {
@@ -758,9 +752,38 @@
                                 class: 'property-cost',
                                 append: formatPrice(estate.cost) + ' ₽/м<sup>2</sup>'
                             }))
-                        }).add($discountBlock)
+                        })
                     })
                 });
+
+                if (estate.discounts.length) {
+                    for (let discount of estate.discounts) {
+                        let $discountLine = $('<table>', {
+                            class: 'property-discount-wrapper',
+                            append: $('<tbody>', {
+                                append: $('<tr>', {
+                                    append: $('<td>', {
+                                        class: 'property-discount-name',
+                                        append: 'Скидка ' + '<span class="discount-value">' + discount.percent + '%</span>'
+                                    }).add($('<td>', {
+                                        class: 'property-discount-percent',
+                                        append: discount.name
+                                    }))
+                                }).add($('<tr>', {
+                                    append: $('<td>', {
+                                        class: 'property-price',
+                                        append: formatPrice(discount.discountPrice) + ' ₽'
+                                    }).add($('<td>', {
+                                        class: 'property-cost',
+                                        append: formatPrice(discount.discountCost) + ' ₽/м<sup>2</sup>'
+                                    }))
+                                }))
+                            })
+                        });
+
+                        $priceBlock = $priceBlock.add($discountLine);
+                    }
+                }
             }
 
             $('#property-grid-content').find('.property-cell').removeClass('selected');
@@ -773,10 +796,11 @@
                     class: 'property-card',
                     append: $('<div>', {
                         class: 'property-image-wrapper',
-                        append: $('<img>', {
+                        append: estate.layoutUrl ? $('<img>', {
                             class: 'property-image',
-                            src: estate.layoutUrl
-                        })
+                            src: estate.layoutUrl,
+                            alt: 'План помещения'
+                        }) : ''
                     }).add($requestButton).add($priceBlock).add($('<table>', {
                         class: 'property-info',
                         append: $('<tbody>', {
@@ -839,7 +863,7 @@
                             })).add($('<tr>', {
                                 append: $('<td>', {
                                     class: 'property-name',
-                                    append: 'Самоотделка'
+                                    append: 'Отделка'
                                 }).add($('<td>', {
                                     class: 'property-value',
                                     text: estate.furnished ? 'ДА' : 'НЕТ'
@@ -906,9 +930,36 @@
             let page = lastPage.page;
             let id = lastPage.id || '';
 
+            $widget.find('#message-block').addClass('hide');
+
             window['open_' + page + '_page'](id);
         });
 
+        $widget.on('click', '#request-create-button', function () {
+            let $this = $(this);
+            let property_id = $this.data('property-id');
+            if (!(property_id in blockData)) {
+                return false;
+            }
+
+
+            $widget.find('.property-card-wrapper').hide();
+
+        });
+
+        function empty_response_message() {
+            $widget.find('#message-block').removeClass('hide').text('Не найдено ни одного объекта. Попробуйте изменить условия поиска.')
+        }
+
+        function show_throbber() {
+            $widget.find('#submit_filter').attr("disabled", true);
+            $widget.find('#throbber-block').removeClass('hide');
+        }
+
+        function hide_throbber() {
+            $widget.find('#submit_filter').attr("disabled", false);
+            $widget.find('#throbber-block').addClass('hide');
+        }
 
 // $('#property-grid-content').find('.property-floor').on{('mouseover', function () {
 //     $('#property-grid-content').find('.property-floor').removeClass('property-floor_hovered');
